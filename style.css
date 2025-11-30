@@ -1,0 +1,174 @@
+/* Global Styles */
+.stApp {
+    background-color: #f8f8f8; /* Very light gray background for depth */
+    color: #333;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* HIDE the default Streamlit header/footer */
+.stApp > header { display: none; }
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+
+/* Streamlit Sidebar Customization (Uses Streamlit's internal class names) */
+.st-emotion-cache-vk3wpn { /* Sidebar background color */
+    background-color: #004c4c; 
+    color: white;
+}
+.st-emotion-cache-vk3wpn .stRadio > label, 
+.st-emotion-cache-vk3wpn .stMarkdown p {
+    color: white !important;
+}
+.st-emotion-cache-vk3wpn .stRadio [data-baseweb="radio"] span:last-child {
+    color: white !important;
+}
+.st-emotion-cache-vk3wpn .stRadio [data-baseweb="radio"] span:first-child {
+    border-color: #ffcc00 !important;
+}
+.st-emotion-cache-vk3wpn .stAlert { /* Info box in sidebar */
+    background-color: #1a6f6f !important;
+    color: white !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    /* Note: The image URL is dynamically inserted here in app.py using an f-string */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('HERO_IMAGE_LINK') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white;
+}
+.hero-content p {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: white;
+}
+
+/* Primary Button (To style the Streamlit button) */
+.stButton>button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #004c4c !important;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: none; /* Remove default Streamlit border */
+}
+.stButton>button:hover {
+    background: #e6b800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Center the button inside the hero content */
+.hero-button-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 3em;
+    color: #004c4c;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Room Card Styling */
+.room-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* Important for column alignment */
+    margin-bottom: 20px;
+}
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+.room-card h3 {
+    padding: 0 20px;
+    font-size: 1.5em;
+    color: #004c4c;
+}
+.room-card p {
+    padding: 0 20px 20px 20px;
+}
+
+/* --- Amenities Section --- */
+.amenities-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.amenities-list li {
+    background: #ffffff;
+    color: #004c4c;
+    padding: 18px 30px; 
+    margin: 12px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+.amenities-list li:hover {
+    background: #ffcc00;
+    color: #333;
+}
+.icon {
+    margin-right: 10px;
+    color: #ffcc00;
+    font-size: 1.4em;
+    line-height: 1;
+}
+
+/* --- Contact Info Styling (New) --- */
+.contact-info {
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+}
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.contact-info b {
+    color: #004c4c;
+}
+
+/* --- Footer --- */
+.custom-footer {
+    background: #1c1c1c; 
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
